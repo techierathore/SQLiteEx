@@ -7,9 +7,22 @@
 				  <TableRoot>
 					  <TableSection Title="Add New Employee">
 						  <EntryCell x:Name="txtEmpName" Label="Employee Name"  Keyboard="Text" />
-						  <EntryCell x:Name="txtDesign" Label="Designation"  Keyboard="Text" />
+                    <EntryCell x:Name="txtCompany" Label="Company"  Keyboard="Text" />
+                    <EntryCell x:Name="txtDesign" Label="Designation"  Keyboard="Text" />                          
 						  <EntryCell x:Name="txtDepartment" Label="Department"  Keyboard="Text" />
-						  <EntryCell x:Name="txtQualification" Label="Qualification"  Keyboard="Text" />             
+						  <EntryCell x:Name="txtQualification" Label="Qualification"  Keyboard="Text" />
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" >
+                            <Label Text="Account Type" />
+                            <Picker>
+                                <Picker.Items>
+                                    <x:String>Bank Account</x:String>
+                                    <x:String>Credit Card</x:String>
+                                    <x:String>PayTm</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </StackLayout>
+                    </ViewCell>
 						  <ViewCell>
 							  <ContentView Padding="0,0">
                   <ContentView.Padding>

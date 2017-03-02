@@ -28,7 +28,9 @@ namespace SQLiteEx.Droid
 		{
 			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::SQLiteEx.Droid.Resource.String.ApplicationName;
 			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::SQLiteEx.Droid.Resource.String.Hello;
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::SQLiteEx.Droid.Resource.Attribute.actionBarSize;
+			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Layout.ScrollViewer = global::SQLiteEx.Droid.Resource.Layout.ScrollViewer;
+			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.Layout.sfnumerictextbox_layout = global::SQLiteEx.Droid.Resource.Layout.sfnumerictextbox_layout;
+			global::Syncfusion.SfDataGrid.XForms.Droid.Resource.String.library_name = global::SQLiteEx.Droid.Resource.String.library_name;
 		}
 		
 		public partial class Attribute
@@ -60,14 +62,36 @@ namespace SQLiteEx.Droid
 			}
 		}
 		
+		public partial class Layout
+		{
+			
+			// aapt resource value: 0x7f030000
+			public const int ScrollViewer = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int sfnumerictextbox_layout = 2130903041;
+			
+			static Layout()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Layout()
+			{
+			}
+		}
+		
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f030001
-			public const int ApplicationName = 2130903041;
+			// aapt resource value: 0x7f040002
+			public const int ApplicationName = 2130968578;
 			
-			// aapt resource value: 0x7f030000
-			public const int Hello = 2130903040;
+			// aapt resource value: 0x7f040001
+			public const int Hello = 2130968577;
+			
+			// aapt resource value: 0x7f040000
+			public const int library_name = 2130968576;
 			
 			static String()
 			{

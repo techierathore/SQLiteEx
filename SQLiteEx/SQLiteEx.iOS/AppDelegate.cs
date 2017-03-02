@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Syncfusion.SfDataGrid.XForms.iOS;
 
 namespace SQLiteEx.iOS
 {
@@ -23,6 +24,7 @@ namespace SQLiteEx.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            SfDataGridRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

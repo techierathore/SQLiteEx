@@ -15,6 +15,7 @@ namespace SQLiteEx
             var vEmployee = new Employee()
             {
                 EmpName = txtEmpName.Text,
+                Company = txtCompany.Text,
                 Department = txtDepartment.Text,
                 Designation = txtDesign.Text,
                 Qualification = txtQualification.Text
