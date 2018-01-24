@@ -8,23 +8,35 @@
   </ContentPage.Padding>
   <ContentPage.Content>
         <StackLayout Padding="5,5,5,5">
-            <sync:SfDataGrid x:Name="dbSyncData"
-            ColumnSizer="Star"
-            AutoGenerateColumns="False"
-            ItemsSource="{Binding OrderInfoCollection}">
-
-                <sync:SfDataGrid.Columns x:TypeArguments="syncfusion:Columns">
-                    <sync:GridTextColumn HeaderText="Name" 
-                                   MappingName="EmpName" />
-                    <sync:GridTextColumn HeaderText="Company"
-                                   MappingName="Company" />
-                    <sync:GridTextColumn MappingName="Designation" />
-                    <sync:GridTextColumn HeaderText="Department"
-                                   MappingName="Department" />
-                </sync:SfDataGrid.Columns>
-            </sync:SfDataGrid>
-
-            <Button Text="Add New Employee" Clicked="OnNewClicked" />
+            <ListView x:Name="lstData" HasUnevenRows="false" Header="Header Value" Footer="Footer" ItemSelected="OnSelection" >
+                <ListView.HeaderTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" BackgroundColor="Blue" Padding="5,5,5,5">
+                            <Label Text="Name" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                            <Label Text="Designation" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                            <Label Text="Department" FontSize="Medium" FontAttributes="Bold" TextColor="White"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </ListView.HeaderTemplate>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+                                <Label Text="{Binding EmpName}" FontSize="Medium" />
+                                <Label Text="{Binding Designation}" FontSize="Medium" />
+                                <Label Text="{Binding Department}" FontSize="Medium" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.FooterTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" Padding="5,5,5,5">
+                            <Button Text="Add New Employee" Clicked="OnNewClicked" />
+                        </StackLayout>
+                    </DataTemplate>
+                </ListView.FooterTemplate>
+            </ListView>
         </StackLayout>
         
   </ContentPage.Content>

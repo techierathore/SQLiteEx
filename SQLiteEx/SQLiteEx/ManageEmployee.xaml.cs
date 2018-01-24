@@ -9,7 +9,7 @@ namespace SQLiteEx
         {
             InitializeComponent();
             var vList = App.DAUtil.GetAllEmployees();
-            dbSyncData.ItemsSource = vList;
+            lstData.ItemsSource = vList;
         }
 
         void OnSelection(object sender, SelectedItemChangedEventArgs e)
