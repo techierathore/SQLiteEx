@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SQLiteEx.AddEmployee" Title="Add New Employee">
       <ContentView.Content>
-			  <TableView Intent="Settings" BackgroundColor="White">
+			  <TableView Intent="Settings">
 				  <TableRoot>
-					  <TableSection Title="Add New Employee">
-						  <EntryCell x:Name="txtEmpName" Label="Employee Name"  Keyboard="Text" />
+					<TableSection Title="Add New Employee">
+					<EntryCell x:Name="txtEmpName" Label="Employee Name"  Keyboard="Text" />
                     <EntryCell x:Name="txtCompany" Label="Company"  Keyboard="Text" />
                     <EntryCell x:Name="txtDesign" Label="Designation"  Keyboard="Text" />                          
-						  <EntryCell x:Name="txtDepartment" Label="Department"  Keyboard="Text" />
-						  <EntryCell x:Name="txtQualification" Label="Qualification"  Keyboard="Text" />
+				    <EntryCell x:Name="txtDepartment" Label="Department"  Keyboard="Text" />
+				   <EntryCell x:Name="txtQualification" Label="Qualification"  Keyboard="Text" />
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" >
                             <Label Text="Account Type" />
