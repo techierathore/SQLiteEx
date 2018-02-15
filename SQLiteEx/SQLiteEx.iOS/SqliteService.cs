@@ -1,4 +1,5 @@
-﻿using SQLiteEx.iOS;
+﻿using SQLite;
+using SQLiteEx.iOS;
 using System;
 using System.IO;
 using Xamarin.Forms;
@@ -12,7 +13,7 @@ namespace SQLiteEx.iOS
         {
         }
         #region ISQLite implementation
-        public SQLite.Net.SQLiteConnection GetConnection()
+        SQLiteConnection ISQLite.GetConnection()
         {
             var sqliteFilename = "SQLiteEx.db3";
             string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); // Documents folder
@@ -25,10 +26,7 @@ namespace SQLiteEx.iOS
             {
                 File.Create(path);
             }
-
-            var plat = new SQLite.Net.Platform.XamarinIOS.SQLitePlatformIOS();
-            var conn = new SQLite.Net.SQLiteConnection(plat, path);
-
+            var conn = new SQLiteConnection(path);
             // Return the database connection 
             return conn;
         }
